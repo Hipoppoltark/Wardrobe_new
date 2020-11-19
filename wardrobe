@@ -1,0 +1,16 @@
+--
+-- File generated with SQLiteStudio v3.2.1 on бс эюџ 7 19:52:38 2020
+--
+-- Text encoding used: System
+--
+PRAGMA foreign_keys = off;
+BEGIN TRANSACTION;
+
+-- Table: clothes
+CREATE TABLE clothes (id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, photo BLOB, weather TEXT, type TEXT, mediumcolor INTEGER);
+
+-- Table: users
+CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL, login TEXT (35) UNIQUE, password TEXT (35), name TEXT (35), description TEXT, wardrobeid INTEGER REFERENCES clothes (id));
+
+COMMIT TRANSACTION;
+PRAGMA foreign_keys = on;
