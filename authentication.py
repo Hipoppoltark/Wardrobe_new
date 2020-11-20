@@ -73,6 +73,8 @@ class AutorizationWindow(QMainWindow):
                 pass
             with open("user_id.txt", "w") as f:
                 f.write(str(data[0][0]))
+                
+            create_cache([])
 
             self.second_form = MainCapWidget(data[0][0])
             self.second_form.show()
