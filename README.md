@@ -1,2 +1,2 @@
 # Wardrobe_new
-Для запуска программы нужно написать в консоли pip install requirements.txt
+Для запуска программы нужно написать в консоли pip install -r requirements.txt
